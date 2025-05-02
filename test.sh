@@ -467,6 +467,10 @@ function govet_shadow_pass {
   run_for_modules generic_checker run go vet -all -vettool="${shadow}"
 }
 
+function govuln_pass {
+  	govulncheck -show verbose ./...
+}
+
 function unparam_pass {
   run_for_modules generic_checker run_go_tool "mvdan.cc/unparam"
 }
